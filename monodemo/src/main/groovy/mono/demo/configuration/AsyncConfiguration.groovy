@@ -6,8 +6,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor
 import java.util.concurrent.Executor
 
 class AsyncConfiguration {
-    int corePoolSize = 4
-    int maxPoolSize = 8
+    // play with these configs to get different results
+    int corePoolSize = 2
+    int maxPoolSize = 2
     int queueCapacity = 50
     String threadNamePrefix = 'message-thread-'
 

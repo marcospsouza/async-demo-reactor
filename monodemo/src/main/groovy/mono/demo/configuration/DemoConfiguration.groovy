@@ -1,7 +1,9 @@
 package mono.demo.configuration
 
 import groovy.transform.CompileStatic
-import mono.demo.messages.MessageHandlerController
+import groovyjarjarantlr.debug.MessageAdapter
+import mono.demo.messages.MessageController
+import mono.demo.messages.MessageHandler
 import mono.demo.messages.MessageProcessor
 import org.springframework.context.annotation.Bean
 
@@ -14,7 +16,12 @@ class DemoConfiguration {
     }
 
     @Bean
-    MessageHandlerController messageHandlerController(MessageProcessor messageProcessor) {
-        new MessageHandlerController(messageProcessor)
+    MessageHandler messageHandler(MessageProcessor messageProcessor) {
+        new MessageHandler(messageProcessor)
+    }
+
+    @Bean
+    MessageController messageHandlerController(MessageHandler messageHandler) {
+        new MessageController(messageHandler)
     }
 }

@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
     compile group: 'io.projectreactor.ipc', name: 'reactor-netty', version: '0.7.9.RELEASE'
+    compile group: 'io.micrometer', name: 'micrometer-core', version: '1.0.0'
     compile("org.springframework:spring-jms:5.1.7.RELEASE")
     compile 'org.codehaus.groovy:groovy-all:2.3.11'
     compile "org.springframework.boot:spring-boot-starter-actuator"
