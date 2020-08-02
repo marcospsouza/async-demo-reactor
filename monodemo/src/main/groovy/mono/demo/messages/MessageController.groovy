@@ -27,7 +27,7 @@ class MessageController {
         messagesList.forEach({ String message ->
             messageHandler.processMessagesSync(message)
         })
-        //printExecutionTime(startTime, "Synchronous processing took")
+        printExecutionTime(startTime, "Synchronous processing took")
     }
 
     @PostMapping("messagesAsync")
